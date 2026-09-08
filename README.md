@@ -1,2 +1,9 @@
-# Practical-record-class12
-Uniform Table insertion code
+INSERT INTO UNIFORM VALUES
+(1,'SHIRT','WHITE','2021-03-31'),
+(2,'PANT','BLACK','2020-01-01'),
+(3,'SKIRT','GREY','2021-02-18'),
+(4,'TIE','BLUE','2019-03-19'),
+(5,'SOCKS','BLUE','2019-03-19'),
+(6,'BELT','BLUE','2017-12-09');
+
+
