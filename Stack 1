@@ -1,0 +1,48 @@
+Stack Using List – Numeric Values
+Question:
+Write a Python program to create a stack of integers using a list. Implement PUSH, POP and PEEK operations.
+stack = []
+
+def push():
+    n = int(input("Enter a number: "))
+    stack.append(n)
+    print(n, "pushed into the stack.")
+
+def pop():
+    if stack == []:
+        print("Stack Underflow!")
+    else:
+        print("Popped element:", stack.pop())
+
+def peek():
+    if stack == []:
+        print("Stack is empty.")
+    else:
+        print("Top element:", stack[-1])
+
+while True:
+    print("\n1. PUSH")
+    print("2. POP")
+    print("3. PEEK")
+    print("4. DISPLAY")
+    print("5. EXIT")
+
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        push()
+
+    elif ch == 2:
+        pop()
+
+    elif ch == 3:
+        peek()
+
+    elif ch == 4:
+        print("Stack:", stack)
+
+    elif ch == 5:
+        break
+
+    else:
+        print("Invalid choice!")
