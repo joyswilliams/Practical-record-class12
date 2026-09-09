@@ -1,0 +1,64 @@
+Write a Python program to implement a stack using a dictionary to store student details. Each student record should contain Roll Number, Name and Marks.
+stack = {}
+top = -1
+
+def push():
+    global top
+
+    roll = int(input("Enter Roll Number: "))
+    name = input("Enter Name: ")
+    marks = float(input("Enter Marks: "))
+
+    top = top + 1
+
+    stack[top] = {
+        "RollNo": roll,
+        "Name": name,
+        "Marks": marks
+    }
+
+    print("Student record pushed successfully.")
+
+def pop():
+    global top
+
+    if top == -1:
+        print("Stack Underflow!")
+    else:
+        print("Deleted record:")
+        print(stack[top])
+
+        del stack[top]
+        top = top - 1
+
+def display():
+    if top == -1:
+        print("Stack is empty.")
+    else:
+        print("\nStudent records in Stack:")
+
+        for i in range(top, -1, -1):
+            print(stack[i])
+
+while True:
+    print("\n1. PUSH")
+    print("2. POP")
+    print("3. DISPLAY")
+    print("4. EXIT")
+
+    ch = int(input("Enter choice: "))
+
+    if ch == 1:
+        push()
+
+    elif ch == 2:
+        pop()
+
+    elif ch == 3:
+        display()
+
+    elif ch == 4:
+        break
+
+    else:
+        print("Invalid choice!")
